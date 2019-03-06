@@ -26,7 +26,7 @@ public class SmallWindow : TokenDataBase {
         if (hit_object != idle_object)
         {
             Destroy(idle_object);
-            idle_object = Instantiate(hit_object, transform.position, Quaternion.identity);
+            idle_object = Instantiate(hit_object, transform.position, hit_object.transform.rotation);
             idle_object.transform.rotation = Quaternion.Euler(0.0f, rotateY, 0.0f);
         }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : Token {
 
     public float speed = 10.0f;
-    private int Player_Level=5;
+    private int Player_Level=1;
     private float Player_EXP = 0.0f;
     private float Next_EXP = 0.03f;
     private new Rigidbody rigidbody;

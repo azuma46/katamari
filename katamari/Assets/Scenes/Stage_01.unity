@@ -292,6 +292,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114343870657485300, guid: 3b4f82f49d0e5d44d8df10a7692cf7bc,
+        type: 2}
+      propertyPath: stage_number
+      value: 01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b4f82f49d0e5d44d8df10a7692cf7bc, type: 2}
   m_IsPrefabAsset: 0
@@ -339,6 +344,16 @@ Prefab:
       propertyPath: hit_object_name
       value: 
       objectReference: {fileID: 1508924723}
+    - target: {fileID: 20016893367202166, guid: 08aacdafe9b005e46b298f686e9c7d92,
+        type: 2}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 20016893367202166, guid: 08aacdafe9b005e46b298f686e9c7d92,
+        type: 2}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08aacdafe9b005e46b298f686e9c7d92, type: 2}
   m_IsPrefabAsset: 0
@@ -529,6 +544,15 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1018606585913224, guid: 6f3b16cf720cc2d45924579bae901048, type: 2}
+      propertyPath: m_Name
+      value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 224480724859501648, guid: 6f3b16cf720cc2d45924579bae901048,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 140
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f3b16cf720cc2d45924579bae901048, type: 2}
   m_IsPrefabAsset: 0
@@ -563,7 +587,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1

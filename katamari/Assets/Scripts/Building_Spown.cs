@@ -8,7 +8,7 @@ using System.Text;
 
 public class Building_Spown : MonoBehaviour
 {
-    private string stage_number="02";
+    public  string stage_number;
 
     private TextAsset stage_text;//ステージ固有のテキストファイルを読み込む
     //private string text_line;//テキストのデータをstring型に直す

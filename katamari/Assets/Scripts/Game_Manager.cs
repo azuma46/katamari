@@ -19,5 +19,9 @@ public class Game_Manager :MonoBehaviour {
 	void Update () {
         level = getPlayer.gameObject.GetComponent<Player>().getObject_Level();
         now_level.text = level.ToString();
+
+        //ESCでゲームを終了
+        if (Input.GetKey(KeyCode.Escape)) Application.Quit();
+
     }
 }
