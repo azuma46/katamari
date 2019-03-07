@@ -8,6 +8,7 @@ public class Player : Token {
     private int Player_Level=1;
     private float Player_EXP = 0.0f;
     private float Next_EXP = 0.03f;
+    private float Player_Radius = 0.5f;
     private new Rigidbody rigidbody;
     private SphereCollider sphereCollider;
 
@@ -52,7 +53,7 @@ public class Player : Token {
         if (collision.gameObject.tag == "Object")
         {
             //接触したオブジェクトの情報を取得する
-           
+
             Object_Data object_data = collision.gameObject.GetComponent<Building>().getObject_Data();
             //Debug.Log(object_data.Object_Name);
             //PlayerのObjectLevelと接触したオブジェクトのObjectLevelを比較して塊に引っ付けるかどうかを判定する
@@ -65,6 +66,7 @@ public class Player : Token {
                 Destroy(collision.collider);//引っ付いたオブジェクトのcolliderを消去
                 Player_EXP += object_data.Object_EXP;
                 sphereCollider.radius = sphereCollider.radius + object_data.Add_Radius;
+                setAdd_Radius(sphereCollider.radius);
             }
             else
             {
@@ -72,6 +74,5 @@ public class Player : Token {
                 Debug.Log("failed");
             }
         }
-
     }
 }

@@ -19,16 +19,21 @@ public class Game_Manager :MonoBehaviour {
 
     public int clear_level;
 
-    private GameObject getPlayer;
+    public static GameObject getPlayer;
     private int level = -1;
 
-
+    //public static GameObject resultPlayer;
+    void Awake()
+    {
+        getPlayer = GameObject.Find("Player");
+        DontDestroyOnLoad(getPlayer);
+    }
 
     void Start () {
         min = time / 60;
         sec = time % 60;
         now_level.text = "";
-        getPlayer = GameObject.Find("Player");
+
         menu_on = false;
     }
 
@@ -65,7 +70,7 @@ public class Game_Manager :MonoBehaviour {
         }
         timer.text = min.ToString("00") + ":" + sec.ToString("00");
 
-        if (time <= 0 && sec <= 0) SceneManager.LoadScene("result");
+        if (time <= 0 && sec <= 0) SceneManager.LoadScene("Result");
         if (clear_level <= level) result_button.SetActive(true);
     }
 }

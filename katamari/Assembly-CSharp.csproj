@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Camera.cs" />
     <Compile Include="Assets\Scripts\Game_Manager.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\result.cs" />
     <Compile Include="Assets\Scripts\Scene_Load.cs" />
     <Compile Include="Assets\Scripts\SmallWindow.cs" />
     <Compile Include="Assets\Scripts\Token.cs" />

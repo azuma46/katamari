@@ -23,6 +23,11 @@ public class Scene_Load : MonoBehaviour {
     public void SceneLoad_StageSelect()
     {
         SceneManager.LoadScene("Stage_Select");
+        Time.timeScale = 1.0f;
     }
 
+    public void SceneLoad_Result()
+    {
+        SceneManager.LoadScene("Result");
+    }
 }
