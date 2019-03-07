@@ -8,6 +8,9 @@ public class Game_Manager :MonoBehaviour {
     public Text now_level;
     public Text timer;
 
+    public GameObject menu_panel;
+    private bool menu_on;
+
     public int time;
     private int min;
     private float sec;
@@ -17,11 +20,14 @@ public class Game_Manager :MonoBehaviour {
     private GameObject getPlayer;
     private int level = -1;
 
+
+
     void Start () {
         min = time / 60;
         sec = time % 60;
         now_level.text = "";
         getPlayer = GameObject.Find("Player");
+        menu_on = false;
     }
 
 	void Update () {
@@ -30,6 +36,19 @@ public class Game_Manager :MonoBehaviour {
 
         //ESCでゲームを終了
         if (Input.GetKey(KeyCode.Escape)) Application.Quit();
+        if (Input.GetKeyDown("m"))
+        {
+            if (menu_on == false)
+            {
+                menu_panel.SetActive(true);
+                menu_on = true;
+            }
+            else
+            {
+                menu_panel.SetActive(false);
+                menu_on = false;
+            }
+        }
 
         sec -= Time.deltaTime;
         if (sec <= 0)
