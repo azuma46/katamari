@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Game_Manager :MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class Game_Manager :MonoBehaviour {
     public Text timer;
 
     public GameObject menu_panel;
+    public GameObject result_button;
     private bool menu_on;
 
     public int time;
@@ -36,27 +38,34 @@ public class Game_Manager :MonoBehaviour {
 
         //ESCでゲームを終了
         if (Input.GetKey(KeyCode.Escape)) Application.Quit();
+
+        //メニューを開く
         if (Input.GetKeyDown("m"))
         {
             if (menu_on == false)
             {
                 menu_panel.SetActive(true);
                 menu_on = true;
+                Time.timeScale = 0.0f;
             }
             else
             {
                 menu_panel.SetActive(false);
                 menu_on = false;
+                Time.timeScale = 1.0f;
             }
         }
 
+        //タイマー関連
         sec -= Time.deltaTime;
         if (sec <= 0)
         {
             min--;
             sec = 59f;
         }
-
         timer.text = min.ToString("00") + ":" + sec.ToString("00");
+
+        if (time <= 0 && sec <= 0) SceneManager.LoadScene("result");
+        if (clear_level <= level) result_button.SetActive(true);
     }
 }
