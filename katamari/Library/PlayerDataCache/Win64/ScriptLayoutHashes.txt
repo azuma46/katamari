@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/kalei/Documents/unity/katamari/katamari-Build/katamari.exe
+C:/Users/kalei/Documents/git/katamari-Build/katamari.exe
 SceneListBegin?
 Assets/Scenes/Stage_Select.unity
 Assets/Scenes/Stage_01.unity
@@ -102,7 +102,7 @@ c7dd12c15208b0447e101f80038706df UnityEngine.Timeline.dll:UnityEngine.Timeline.A
 0ddb2c46096a1e59e0dce07886ce4769 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 0ddb2c46096a1e59e0dce07886ce4769 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 64f3a13c1277a7f1324321d93d0ec13b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-52aa864d0c7bf8bbede9efc33add69c9 Assembly-CSharp.dll:.Game_Manager
+b19b1adefbdec5bf90af2cfa55a12be5 Assembly-CSharp.dll:.Game_Manager
 66b3109aa5921cf800bec17926c6adba Unity.TextMeshPro.dll:TMPro.TMP_SubMeshUI
 201273fb4f889724fb090164b7d6c657 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 486cd95c82d8305219c352c06b776e1f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
