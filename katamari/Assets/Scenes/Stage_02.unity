@@ -182,6 +182,11 @@ Prefab:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114389979848803900, guid: ae188ff003e8e09488ecb013ce0ceae6,
+        type: 2}
+      propertyPath: main_camera
+      value: 
+      objectReference: {fileID: 1673839363}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae188ff003e8e09488ecb013ce0ceae6, type: 2}
   m_IsPrefabAsset: 0
@@ -1053,6 +1058,11 @@ Prefab:
       propertyPath: m_SizeDelta.x
       value: 350
       objectReference: {fileID: 0}
+    - target: {fileID: 114829452566690426, guid: 6f3b16cf720cc2d45924579bae901048,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SceneLoad_StageSelect_01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f3b16cf720cc2d45924579bae901048, type: 2}
   m_IsPrefabAsset: 0
@@ -1279,6 +1289,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ee36a87992e0224dbe3eeb09b27d5d6, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1673839363 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1780829470681008, guid: ae188ff003e8e09488ecb013ce0ceae6,
+    type: 2}
+  m_PrefabInternal: {fileID: 270505572}
 --- !u!1001 &1725242139
 Prefab:
   m_ObjectHideFlags: 0

@@ -451,7 +451,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 155930566}
-        m_MethodName: SceneLoad_StageSelect
+        m_MethodName: SceneLoad_StageSelect_02
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
