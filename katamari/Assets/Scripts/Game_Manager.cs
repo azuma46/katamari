@@ -8,6 +8,7 @@ public class Game_Manager :MonoBehaviour {
 
     public Text now_level;
     public Text timer;
+    public Text norma;
 
     public GameObject menu_panel;
     public GameObject result_button;
@@ -33,7 +34,7 @@ public class Game_Manager :MonoBehaviour {
         min = time / 60;
         sec = time % 60;
         now_level.text = "";
-
+        norma.text = "レベル" + clear_level.ToString() + "を目指そう！！";
         menu_on = false;
     }
 
@@ -67,10 +68,22 @@ public class Game_Manager :MonoBehaviour {
         {
             min--;
             sec = 59f;
+            if (min < 0)
+            {
+                //表示をきれいにするため
+                min = 0;
+                sec = 0;
+                SceneManager.LoadScene("Result");
+            }
+
         }
         timer.text = min.ToString("00") + ":" + sec.ToString("00");
 
-        if (time <= 0 && sec <= 0) SceneManager.LoadScene("Result");
-        if (clear_level <= level) result_button.SetActive(true);
+
+        if (clear_level <= level)
+        {
+            norma.text = "クリア！！";
+            result_button.SetActive(true);
+        }
     }
 }

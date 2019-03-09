@@ -22,6 +22,8 @@ public class Scene_Load : MonoBehaviour {
 
     public void SceneLoad_StageSelect()
     {
+        //メニュー画面から移動するのでtimesacle,playerの処理
+        SceneManager.MoveGameObjectToScene(GameObject.Find("Player"), SceneManager.GetActiveScene());
         SceneManager.LoadScene("Stage_Select");
         Time.timeScale = 1.0f;
     }

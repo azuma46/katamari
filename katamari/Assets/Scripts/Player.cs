@@ -7,16 +7,22 @@ public class Player : Token {
     public float speed = 10.0f;
     private int Player_Level=1;
     private float Player_EXP = 0.0f;
-    private float Next_EXP = 0.03f;
-    private float Player_Radius = 0.5f;
+    private float Next_EXP;
     private new Rigidbody rigidbody;
     private SphereCollider sphereCollider;
 
     public float moveAngle=0.0f;
     public string hit_object_name;
 
+    private TextAsset exp_text;
+    private string[] text_line;
+
     private void Start()
     {
+        exp_text = Resources.Load("text/exp_data") as TextAsset;
+        text_line = exp_text.text.Split(char.Parse("\n"));
+        Next_EXP = float.Parse(text_line[0]);
+        setObject_Name(this.name);
         setObject_Level(Player_Level);
         setObject_EXP(Player_EXP);
         rigidbody = GetComponent<Rigidbody>();
@@ -42,9 +48,10 @@ public class Player : Token {
         //PlayerのEXPがNext EXPを超えたときにレベルが上がる
         if (Next_EXP < Player_EXP)
         {
+            Next_EXP = float.Parse(text_line[Player_Level]);//次のレベルアップの経験値をセット
             Player_Level++;//レベルを増加
             setObject_Level(Player_Level);//Playerにレベルをセット
-            Next_EXP = Player_Level * Player_Level * Next_EXP;//次のレベルアップの経験値をセット
+            setObject_EXP(Player_EXP);//PlayerにEXPをセット     
         }
     }
 

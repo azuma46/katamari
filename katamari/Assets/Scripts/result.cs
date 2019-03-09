@@ -18,7 +18,7 @@ public class result : MonoBehaviour {
         result_object.transform.position = transform.position;
 
         score.text = "塊LEVEL：" + result_data.Object_Level.ToString() + "\n"
-                    + "塊の大きさ:\n" + result_data.Add_Radius + "m\n";
+                    + "塊の大きさ:\n" + result_data.Add_Radius * 10f + "cm\n";
         }
 
     public void Scene_Load()

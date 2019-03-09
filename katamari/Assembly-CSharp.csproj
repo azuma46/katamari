@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Token.cs" />
     <Compile Include="Assets\Scripts\TokenDataBase.cs" />
     <None Include="Assets\Resources\text\stage_data02.txt" />
+    <None Include="Assets\Resources\text\exp_data.txt" />
     <None Include="Assets\Resources\text\object_data.txt" />
     <None Include="Assets\Resources\text\stage_data01.txt" />
     <Reference Include="UnityEditor.StandardEvents">
